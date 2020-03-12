@@ -1,4 +1,4 @@
-package Servlet;
+package edu.fzu.infectStatisticWeb.Servlet;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.IpDao;
-import pojo.Ip;
+import edu.fzu.infectStatisticWeb.dao.IpDao;
+import edu.fzu.infectStatisticWeb.pojo.Ip;
 
 /**
  * Servlet implementation class LineServlet

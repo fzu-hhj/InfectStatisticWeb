@@ -1,4 +1,4 @@
-package pojo;
+package edu.fzu.infectStatisticWeb.pojo;
 
 public class Ip {
 	private String date;

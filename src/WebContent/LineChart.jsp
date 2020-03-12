@@ -1,4 +1,4 @@
-<%@ page import="pojo.Ip,java.util.*" %>
+<%@ page import="edu.fzu.infectStatisticWeb.pojo.Ip,java.util.*" %>
 <%@ page isELIgnored="false" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>

@@ -1,4 +1,4 @@
-package dao;
+package edu.fzu.infectStatisticWeb.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -6,8 +6,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import pojo.Ip;
-import util.DBUtil;
+import edu.fzu.infectStatisticWeb.pojo.Ip;
+import edu.fzu.infectStatisticWeb.util.DBUtil;
 
 public class IpDao {
 

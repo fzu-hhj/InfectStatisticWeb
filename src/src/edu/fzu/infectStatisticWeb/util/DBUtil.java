@@ -1,4 +1,4 @@
-package util;
+package edu.fzu.infectStatisticWeb.util;
 
 
 import java.sql.Connection;
