@@ -1,10 +1,10 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class sp {
+public class Sp {
 	private String date;
 	private int[] spNum ;
 	
-	public sp(String d , int [] in) {
+	public Sp(String d , int [] in) {
 		date = d;
 		spNum = in ;
 	}

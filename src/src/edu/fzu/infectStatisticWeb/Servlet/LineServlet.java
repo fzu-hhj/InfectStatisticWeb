@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import edu.fzu.infectStatisticWeb.dao.IpDao;
+import edu.fzu.infectStatisticWeb.dao.*;
 import edu.fzu.infectStatisticWeb.pojo.Ip;
 
 /**
@@ -33,7 +33,7 @@ public class LineServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		IpDao ipDao = new IpDao();
+		IpDAO ipDao = new IpDAOImpl();
 		List<Ip> ips = ipDao.list();
 		request.setAttribute("ips" , ips);
 		request.setAttribute("proNum", 0);

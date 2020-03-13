@@ -1,10 +1,10 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class dead {
+public class Dead {
 	private String date;
 	private int[] deadNum ;
 	
-	public dead(String d , int [] in) {
+	public Dead(String d , int [] in) {
 		date = d;
 		deadNum = in ;
 	}

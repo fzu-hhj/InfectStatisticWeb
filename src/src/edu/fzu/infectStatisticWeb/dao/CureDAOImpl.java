@@ -6,37 +6,32 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.fzu.infectStatisticWeb.pojo.Ip;
+import edu.fzu.infectStatisticWeb.pojo.Cure;
 import edu.fzu.infectStatisticWeb.util.DBUtil;
 
-public class IpDao {
+public class CureDAOImpl implements CureDAO {
 
-	public List<Ip> list(){
+	@Override
+	public List<Cure> list(){
 		DBUtil dbUtil = new DBUtil();
-		List<Ip> ips = new ArrayList<Ip>();
+		List<Cure> cures = new ArrayList<Cure>();
 		try {
 			Connection conn = dbUtil.getConnection();
 			Statement  stmt = conn.createStatement();
-			String sql = "select * from ip";
+			String sql = "select * from cure";
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next()) {
 				int[] a = new int[35];
 				for(int i = 0;i < 35 ; i++) {
 					a[i] = rs.getInt(i+2);
-					//System.out.println(rs.getInt(i+2) + ":" + a[i]);
 				}
-				Ip ip = new Ip(rs.getString("时间") , a);
-				System.out.print(ip.getIpNum()[0] + " ");
-				ips.add(ip);
-				System.out.println(ips.get(0).getIpNum()[0]);
-			}
-			for(Ip ip2 : ips) {
-				System.out.println("+" + ip2.getIpNum()[0]);
+				Cure cure = new Cure(rs.getString("时间") , a);
+				cures.add(cure);
 			}
  		}catch (Exception e) {
 			e.printStackTrace();
  		}
-		return ips;
+		return cures;
 	}
 	
 	

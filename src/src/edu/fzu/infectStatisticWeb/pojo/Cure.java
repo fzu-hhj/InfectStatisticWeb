@@ -1,10 +1,10 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class cure {
+public class Cure {
 	private String date;
 	private int[] cureNum ;
 	
-	public cure(String d , int [] in) {
+	public Cure(String d , int [] in) {
 		date = d;
 		cureNum = in ;
 	}
