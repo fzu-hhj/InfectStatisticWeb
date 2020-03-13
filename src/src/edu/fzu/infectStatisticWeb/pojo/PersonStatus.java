@@ -9,24 +9,24 @@ public class PersonStatus {
 			"西藏","新疆","香港","云南","浙江"};
 	
 	private String date;
-	private int[] Num ;
+	private int[] num ;
 	
 	public PersonStatus(String d , int[] n) {
 		date = d;
-		Num = n ;
+		num = n ;
 	}
 	
 	public String getDate() {
 		return date;
 	}
 	public int[] getNum() {
-		return Num;
+		return num;
 	}
 	public void setDate(String date) {
 		this.date = date;
 	}
 	public void setNum(int[] n) {
-		this.Num = n;
+		this.num = n;
 	}
 	
 	public int getNum(int i) {

@@ -70,7 +70,6 @@ public class LineServlet extends BaseServlet {
 		if(province == null) {
 			province = "È«¹ú";
 		}
-		System.out.println(PROVINCE.length);
 		for(int i = 0;i < PROVINCE.length;i++) {
 			if(province.equals(PROVINCE[i])) {
 				return i;
