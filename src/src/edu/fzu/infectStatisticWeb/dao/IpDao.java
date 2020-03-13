@@ -20,9 +20,18 @@ public class IpDao {
 			String sql = "select * from ip";
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next()) {
-				int [] a = {rs.getInt("全国")};
+				int[] a = new int[35];
+				for(int i = 0;i < 35 ; i++) {
+					a[i] = rs.getInt(i+2);
+					//System.out.println(rs.getInt(i+2) + ":" + a[i]);
+				}
 				Ip ip = new Ip(rs.getString("时间") , a);
+				System.out.print(ip.getIpNum()[0] + " ");
 				ips.add(ip);
+				System.out.println(ips.get(0).getIpNum()[0]);
+			}
+			for(Ip ip2 : ips) {
+				System.out.println("+" + ip2.getIpNum()[0]);
 			}
  		}catch (Exception e) {
 			e.printStackTrace();

@@ -13,8 +13,12 @@
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <%List<Ip> ips = (List)request.getAttribute("ips");
-    
     int proNum = (int)request.getAttribute("proNum");%>
+    <%--for(Ip ip : ips){
+    	out.print(ip.getIpNum()[0]+ " ");
+    }
+    
+    --%>
     <div id="main" style="width: 1200px;height:400px;"></div>
     <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
