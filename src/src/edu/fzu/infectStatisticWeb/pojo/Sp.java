@@ -1,24 +1,9 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class Sp {
-	private String date;
-	private int[] spNum ;
+public class Sp extends PersonStatus{
 	
-	public Sp(String d , int [] in) {
-		date = d;
-		spNum = in ;
+	public Sp(String spDate , int[] spNum) {
+		super(spDate, spNum);
 	}
 	
-	public String getDate() {
-		return date;
-	}
-	public int[] getIpNum() {
-		return spNum;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public void setIpNum(int[] spNum) {
-		this.spNum = spNum;
-	}
 }

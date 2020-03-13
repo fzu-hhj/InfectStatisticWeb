@@ -1,24 +1,9 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class Cure {
-	private String date;
-	private int[] cureNum ;
+public class Cure extends PersonStatus{
 	
-	public Cure(String d , int [] in) {
-		date = d;
-		cureNum = in ;
+	public Cure(String cureDate , int [] cureNum) {
+		super(cureDate, cureNum);
 	}
 	
-	public String getDate() {
-		return date;
-	}
-	public int[] getcureNum() {
-		return cureNum;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public void setcureNum(int[] cureNum) {
-		this.cureNum = cureNum;
-	}
 }

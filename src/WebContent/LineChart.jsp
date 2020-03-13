@@ -1,4 +1,4 @@
-<%@ page import="edu.fzu.infectStatisticWeb.pojo.Ip,java.util.*" %>
+<%@ page import="edu.fzu.infectStatisticWeb.pojo.*,java.util.*" %>
 <%@ page isELIgnored="false" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -13,6 +13,9 @@
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <%List<Ip> ips = (List)request.getAttribute("ips");
+    List<Sp> sps = (List)request.getAttribute("sps");
+    List<Cure> cures = (List)request.getAttribute("cures");
+    List<Dead> deads = (List)request.getAttribute("deads");
     int proNum = (int)request.getAttribute("proNum");%>
     <%--for(Ip ip : ips){
     	out.print(ip.getIpNum()[0]+ " ");
@@ -25,40 +28,85 @@
         var myChart = echarts.init(document.getElementById('main'));
         // 指定图表的配置项和数据
         var a = new Array(15);
-        a[0] = ${ips.get(0).getIpNum()[proNum]};
-        a[1] = ${ips.get(1).getIpNum()[proNum]};
-        a[2] = ${ips.get(2).getIpNum()[proNum]};
-        a[3] = ${ips.get(3).getIpNum()[proNum]};
-        a[4] = ${ips.get(4).getIpNum()[proNum]};
-        a[5] = ${ips.get(5).getIpNum()[proNum]};
-        a[6] = ${ips.get(6).getIpNum()[proNum]};
-        a[7] = ${ips.get(7).getIpNum()[proNum]};
-        a[8] = ${ips.get(8).getIpNum()[proNum]};
-        a[9] = ${ips.get(9).getIpNum()[proNum]};
-        a[10] = ${ips.get(10).getIpNum()[proNum]};
-        a[11] = ${ips.get(11).getIpNum()[proNum]};
-        a[12] = ${ips.get(12).getIpNum()[proNum]};
-        a[13] = ${ips.get(13).getIpNum()[proNum]};
-        a[14] = ${ips.get(14).getIpNum()[proNum]};
+        a[0] = ${ips.get(0).getNum()[proNum]};
+        a[1] = ${ips.get(1).getNum()[proNum]};
+        a[2] = ${ips.get(2).getNum()[proNum]};
+        a[3] = ${ips.get(3).getNum()[proNum]};
+        a[4] = ${ips.get(4).getNum()[proNum]};
+        a[5] = ${ips.get(5).getNum()[proNum]};
+        a[6] = ${ips.get(6).getNum()[proNum]};
+        a[7] = ${ips.get(7).getNum()[proNum]};
+        a[8] = ${ips.get(8).getNum()[proNum]};
+        a[9] = ${ips.get(9).getNum()[proNum]};
+        a[10] = ${ips.get(10).getNum()[proNum]};
+        a[11] = ${ips.get(11).getNum()[proNum]};
+        a[12] = ${ips.get(12).getNum()[proNum]};
+        a[13] = ${ips.get(13).getNum()[proNum]};
+        a[14] = ${ips.get(14).getNum()[proNum]};
         var b = new Array(15);
-        for(i = 0;i < 15 ;i++){
-        	b[i] = 2000;
-        }
+        /*for(i = 0;i < 15 ;i++){
+        	b[i] = 2000 ;
+        }*/
+        b[0] = ${sps.get(0).getNum()[proNum]};
+        b[1] = ${sps.get(1).getNum()[proNum]};
+        b[2] = ${sps.get(2).getNum()[proNum]};
+        b[3] = ${sps.get(3).getNum()[proNum]};
+        b[4] = ${sps.get(4).getNum()[proNum]};
+        b[5] = ${sps.get(5).getNum()[proNum]};
+        b[6] = ${sps.get(6).getNum()[proNum]};
+        b[7] = ${sps.get(7).getNum()[proNum]};
+        b[8] = ${sps.get(8).getNum()[proNum]};
+        b[9] = ${sps.get(9).getNum()[proNum]};
+        b[10] = ${sps.get(10).getNum()[proNum]};
+        b[11] = ${sps.get(11).getNum()[proNum]};
+        b[12] = ${sps.get(12).getNum()[proNum]};
+        b[13] = ${sps.get(13).getNum()[proNum]};
+        b[14] = ${sps.get(14).getNum()[proNum]};
         var c = new Array(15);
-        for(i = 0;i < 15 ;i++){
+        /*for(i = 0;i < 15 ;i++){
         	c[i] = 4000;
-        }
+        }*/
+        c[0] = ${cures.get(0).getNum()[proNum]};
+        c[1] = ${cures.get(1).getNum()[proNum]};
+        c[2] = ${cures.get(2).getNum()[proNum]};
+        c[3] = ${cures.get(3).getNum()[proNum]};
+        c[4] = ${cures.get(4).getNum()[proNum]};
+        c[5] = ${cures.get(5).getNum()[proNum]};
+        c[6] = ${cures.get(6).getNum()[proNum]};
+        c[7] = ${cures.get(7).getNum()[proNum]};
+        c[8] = ${cures.get(8).getNum()[proNum]};
+        c[9] = ${cures.get(9).getNum()[proNum]};
+        c[10] = ${cures.get(10).getNum()[proNum]};
+        c[11] = ${cures.get(11).getNum()[proNum]};
+        c[12] = ${cures.get(12).getNum()[proNum]};
+        c[13] = ${cures.get(13).getNum()[proNum]};
+        c[14] = ${cures.get(14).getNum()[proNum]};
         var d = new Array(15);
-        for(i = 0;i < 15 ;i++){
+        /*for(i = 0;i < 15 ;i++){
         	d[i] = 6000;
-        }
+        }*/
+        d[0] = ${deads.get(0).getNum()[proNum]};
+        d[1] = ${deads.get(1).getNum()[proNum]};
+        d[2] = ${deads.get(2).getNum()[proNum]};
+        d[3] = ${deads.get(3).getNum()[proNum]};
+        d[4] = ${deads.get(4).getNum()[proNum]};
+        d[5] = ${deads.get(5).getNum()[proNum]};
+        d[6] = ${deads.get(6).getNum()[proNum]};
+        d[7] = ${deads.get(7).getNum()[proNum]};
+        d[8] = ${deads.get(8).getNum()[proNum]};
+        d[9] = ${deads.get(9).getNum()[proNum]};
+        d[10] = ${deads.get(10).getNum()[proNum]};
+        d[11] = ${deads.get(11).getNum()[proNum]};
+        d[12] = ${deads.get(12).getNum()[proNum]};
+        d[13] = ${deads.get(13).getNum()[proNum]};
+        d[14] = ${deads.get(14).getNum()[proNum]};
         var option = {
             title: {
                 text: '疫情折线图'
             },
             tooltip: {},
             legend: {
-                data:['ip','sp','cure','dead']
+                data:['确诊患者','疑似患者','治愈人数','死亡人数']
             },
             xAxis: {
                 data: [

@@ -1,24 +1,9 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-public class Dead {
-	private String date;
-	private int[] deadNum ;
+public class Dead extends PersonStatus{
 	
-	public Dead(String d , int [] in) {
-		date = d;
-		deadNum = in ;
+	public Dead(String deadDate , int [] deadNum) {
+		super(deadDate, deadNum);
 	}
 	
-	public String getDate() {
-		return date;
-	}
-	public int[] getdeadNum() {
-		return deadNum;
-	}
-	public void setDate(String date) {
-		this.date = date;
-	}
-	public void setdeadNum(int[] deadNum) {
-		this.deadNum = deadNum;
-	}
 }
