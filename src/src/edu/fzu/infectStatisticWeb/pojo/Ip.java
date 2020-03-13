@@ -4,6 +4,7 @@ public class Ip {
 	private String date;
 	private int[] ipNum ;
 	
+	
 	public Ip(String d , int [] in) {
 		date = d;
 		ipNum = in ;
