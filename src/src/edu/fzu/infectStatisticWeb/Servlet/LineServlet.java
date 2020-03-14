@@ -59,11 +59,11 @@ public class LineServlet extends BaseServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-	//省名转化为省的编号
+	//鑾峰緱鐪佸悕
 	private String getProvince() {
 		String province = request.getParameter("province");
 		if(province == null) {
-			province = "全国";
+			province = "鍏ㄥ浗";
 		}
 		return province;
 	}

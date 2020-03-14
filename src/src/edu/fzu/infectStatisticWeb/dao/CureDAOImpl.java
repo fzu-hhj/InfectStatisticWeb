@@ -43,8 +43,6 @@ public class CureDAOImpl implements CureDAO {
 			Connection conn = dbUtil.getConnection();
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1,date);
-			System.out.println("date:"+date);
-			System.out.println(sql);
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				if(rs.getString("Ê±¼ä").equals(date)) {

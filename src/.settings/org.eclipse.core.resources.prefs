@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebContent/ProvinceNum.jsp=UTF-8
+encoding//WebContent/mainPage.jsp=UTF-8
 encoding//src/edu/fzu/infectStatisticWeb/Servlet/BaseServlet.java=UTF-8
+encoding//src/edu/fzu/infectStatisticWeb/Servlet/LineServlet.java=UTF-8
+encoding//src/edu/fzu/infectStatisticWeb/Servlet/MapServlet.java=UTF-8
+encoding//src/edu/fzu/infectStatisticWeb/Servlet/ProvinceServlet.java=UTF-8

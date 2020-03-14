@@ -1,5 +1,7 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
+import com.sun.xml.internal.bind.v2.runtime.Name;
+
 public class PersonStatus {
 	public static String[] PROVINCE = {
 			"全国","安徽","澳门","北京","重庆","福建",
@@ -41,6 +43,12 @@ public class PersonStatus {
 	}
 	//根据省名获得数据
 	public int getNum(String province) {
+		/*for(int i = 0;i < PROVINCE.length;i++) {
+			if(province.equals(PROVINCE[i])) {
+				return num[i];
+			}
+		}
+		return num[0];*/
 		return num[getProNum(province)];
 	}
 }

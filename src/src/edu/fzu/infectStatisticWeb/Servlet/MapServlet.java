@@ -40,9 +40,11 @@ public class MapServlet extends BaseServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		PrintWriter pw = response.getWriter();
-		pw.println("mapServlet");
+		request.setCharacterEncoding("utf-8");
+		//PrintWriter pw = response.getWriter();
+		//pw.println("mapServlet");
 		String date = getDate();
+		//System.out.println(date);
 		IpDAO ipDAO = new IpDAOImpl();
 		Ip ip = ipDAO.lists(date);
 		SpDAO spDAO = new SpDAOImpl();

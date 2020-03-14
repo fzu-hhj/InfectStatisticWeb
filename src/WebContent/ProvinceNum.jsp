@@ -15,8 +15,9 @@
 	Sp sp = (Sp)request.getAttribute("sp");
 	Cure cure = (Cure)request.getAttribute("cure");
 	Dead dead = (Dead)request.getAttribute("dead");
+	request.setAttribute("province", province);
 %>
-	<form action="provinceServlet?province=${province}" method="post">
+	<form action="provinceServlet" method="post">
 		<select id="name" name="dateTime">
 			<option value="2020-01-19">2020-01-19</option>
 			<option value="2020-01-20">2020-01-20</option>
@@ -40,6 +41,7 @@
 	</form>
 <div class="" id="data" >
 		<!--现有确诊数据-->
+		<p><%=province %></p>
 		<div class="rectangle" id="rt1"> 
 			<p class="dataText1" id="dt1">现有确诊</p>
 			<p class="dataText2" id="dt2"><%=ip.getNum(province)%>人</p>

@@ -33,6 +33,7 @@ public class ProvinceServlet extends BaseServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		request.setCharacterEncoding("utf-8");
 		String dateTime = getDateTime();
 		IpDAO ipDAO =new IpDAOImpl();
 		Ip ip = ipDAO.lists(dateTime);
@@ -46,7 +47,7 @@ public class ProvinceServlet extends BaseServlet {
 		request.setAttribute("sp", sp);
 		request.setAttribute("cure", cure);
 		request.setAttribute("dead", dead);
-		request.setAttribute("province", request.getAttribute("province"));
+		request.setAttribute("province", getProvince());
 		request.getRequestDispatcher("ProvinceNum.jsp").forward(request, response);
 	}
 
@@ -65,5 +66,11 @@ public class ProvinceServlet extends BaseServlet {
 		}
 		return "2020-02-02";
 	}
-
+	private String getProvince() {
+		String province = request.getParameter("province");
+		if(province != null) {
+			return province;
+		}
+		return "湖北";
+	}
 }

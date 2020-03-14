@@ -39,15 +39,11 @@ public class IpDAOImpl implements IpDAO {
 	@Override
 	public Ip lists(String date){
 		DBUtil dbUtil = new DBUtil();
-		
-		
 		try {
 			String sql = "select * from ip where 时间=?";
 			Connection conn = dbUtil.getConnection();
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1,date);
-			System.out.println("date:"+date);
-			System.out.println(sql);
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
 				if(rs.getString("时间").equals(date)) {

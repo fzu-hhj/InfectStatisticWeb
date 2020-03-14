@@ -90,7 +90,7 @@
 			
 		</select>
 		
-		<input type="submit">
+		<input type="submit" value="查询">
 	</form>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="map"></div>
