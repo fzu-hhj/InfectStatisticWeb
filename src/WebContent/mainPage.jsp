@@ -138,7 +138,6 @@
   	 	 	 	return <%=ip.getNum(ip.getProNum("江苏"))%>;
   	 	 	else if(name=="辽宁")
   	 	 	 	return <%=ip.getNum(ip.getProNum("辽宁"))%>;
-  	 	 	 	
   	 	 	else if(name=="内蒙古")
   	 	 	 	return <%=ip.getNum(ip.getProNum("内蒙古"))%>;
   	 	 	else if(name=="宁夏")

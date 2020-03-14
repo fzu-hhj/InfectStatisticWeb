@@ -39,4 +39,8 @@ public class PersonStatus {
 				return i;
 		return -1;
 	}
+	//根据省名获得数据
+	public int getNum(String province) {
+		return num[getProNum(province)];
+	}
 }
