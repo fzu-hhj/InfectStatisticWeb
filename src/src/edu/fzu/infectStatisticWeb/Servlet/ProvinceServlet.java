@@ -16,7 +16,7 @@ import edu.fzu.infectStatisticWeb.pojo.*;
 /**
  * Servlet implementation class ProvinceServlet
  */
-@WebServlet("/ProvinceServlet")
+@WebServlet("/provinceServlet")
 public class ProvinceServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
 	public static String[] PROVINCE = {

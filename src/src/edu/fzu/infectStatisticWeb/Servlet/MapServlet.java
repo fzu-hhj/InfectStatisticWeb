@@ -34,13 +34,12 @@ public class MapServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter pw = response.getWriter();
+		pw.println("mapServlet");
 		String flag = (String)request.getAttribute("flag");
 		String dateTime = request.getParameter("dateTime");
 		IpDAO ipDAO = new IpDAOImpl();
-		if(flag != null && flag.equals("iniTime")) {
-			PrintWriter pw = response.getWriter();
-
-			
+		if(flag != null && flag.equals("iniTime")) {	
 			Ip ip = ipDAO.lists("2020-02-02");
 			request.setAttribute("ip",ip);	
 			if(ip == null) pw.println("ip «ø’");
@@ -53,7 +52,7 @@ public class MapServlet extends HttpServlet {
 			request.setAttribute("ip",ip);	
 			request.getRequestDispatcher("mainPage.jsp").forward(request, response);
 		}
-		PrintWriter pw = response.getWriter();
+		
 		pw.println(flag);
 		
 	}
