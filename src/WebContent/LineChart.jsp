@@ -88,7 +88,7 @@
         d[14] = ${deads.get(14).getNum(province)};
         var option = {
             title: {
-                text: '疫情折线图'
+                text: '疫情趋势图'
             },
             tooltip: {},
             legend: {
