@@ -119,7 +119,7 @@
             yAxis: {},
             series: [
             	{
-                name: 'ip',
+                name: '确诊患者',
                 type: 'line',
                 data: [
                 	a[0],a[1],a[2],a[3],
@@ -129,7 +129,7 @@
                 ]
             	},
             	{
-                    name: 'sp',
+                    name: '疑似患者',
                     type: 'line',
                     data: [
                     	b[0],b[1],b[2],b[3],
@@ -139,7 +139,7 @@
                     ]
                 	},
             	{
-                    name: 'cure',
+                    name: '治愈人数',
                     type: 'line',
                     data: [
                     	c[0],c[1],c[2],c[3],
@@ -149,7 +149,7 @@
                     ]
                 	},
             	{
-                    name: 'dead',
+                    name: '死亡人数',
                     type: 'line',
                     data: [
                     	d[0],d[1],d[2],d[3],
