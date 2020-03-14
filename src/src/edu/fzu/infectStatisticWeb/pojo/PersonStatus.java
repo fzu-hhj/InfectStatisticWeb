@@ -28,4 +28,15 @@ public class PersonStatus {
 	public void setNum(int[] n) {
 		this.num = n;
 	}
+	
+	public int getNum(int i) {
+		return Num[i];
+	}
+	
+	public int getProNum(String name) {
+		for(int i = 0;i < PROVINCE.length;i++)
+			if(name.equals(PROVINCE[i]))
+				return i;
+		return -1;
+	}
 }
