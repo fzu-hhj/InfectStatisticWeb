@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>省份</title>
 <script src="js/echarts.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/mainPage.css">
 </head>
@@ -15,9 +15,8 @@
 	Sp sp = (Sp)request.getAttribute("sp");
 	Cure cure = (Cure)request.getAttribute("cure");
 	Dead dead = (Dead)request.getAttribute("dead");
-	request.setAttribute("province", province);
 %>
-	<form action="provinceServlet" method="post">
+	<form action="provinceServlet?province=安徽" method="post">
 		<select id="name" name="dateTime">
 			<option value="2020-01-19">2020-01-19</option>
 			<option value="2020-01-20">2020-01-20</option>
@@ -37,7 +36,7 @@
 			
 		</select>
 		
-		<input type="submit">
+		<input type="submit" value="查询">
 	</form>
 <div class="" id="data" >
 		<!--现有确诊数据-->
@@ -86,7 +85,7 @@
 	</div>
 	
 	<div class="frame2">
-		<iframe src="LineServlet?province=${province}" width="100%" height="650" frameborder="0"></iframe>
+		<iframe src="LineServlet?province=<%=province%>" width="100%" height="650" frameborder="0"></iframe>
 	</div>
 </body>
 </html>
