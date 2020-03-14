@@ -16,7 +16,8 @@
 	<%
 		
     	Ip ip = (Ip)request.getAttribute("ip");
-		
+			
+	
     %>
 	<div id="test"></div>
 	<div class="timeText">截止<%=ip.getDate() %> 23:00</div>
@@ -242,13 +243,13 @@
         
 		myChart.on('click',function(param){
 			console.log(param.name)
-			var urlArr=["ProvinceServlet?province=新疆","ProvinceServlet?province=西藏","ProvinceServlet?province=青海","ProvinceServlet?province=甘肃","ProvinceServlet?province=内蒙古",
-					"ProvinceServlet?province=四川","ProvinceServlet?province=云南","ProvinceServlet?province=陕西","ProvinceServlet?province=重庆","ProvinceServlet?province=贵州",
-					"ProvinceServlet?province=山西","ProvinceServlet?province=河南","ProvinceServlet?province=湖北","ProvinceServlet?province=湖南","ProvinceServlet?province=广西",
-					"ProvinceServlet?province=北京","ProvinceServlet?province=河北","ProvinceServlet?province=天津","ProvinceServlet?province=山东","ProvinceServlet?province=江苏",
-					"ProvinceServlet?province=安徽","ProvinceServlet?province=江西","ProvinceServlet?province=广东","ProvinceServlet?province=澳门","ProvinceServlet?province=海南",
-					"ProvinceServlet?province=上海","ProvinceServlet?province=浙江","ProvinceServlet?province=福建","ProvinceServlet?province=黑龙江","ProvinceServlet?province=吉林",
-					"ProvinceServlet?province=辽宁","ProvinceServlet?province=香港","ProvinceServlet?province=宁夏","ProvinceServlet?province=台湾"]
+			var urlArr=["provinceServlet?province=新疆","provinceServlet?province=西藏","provinceServlet?province=青海","provinceServlet?province=甘肃","provinceServlet?province=内蒙古",
+					"provinceServlet?province=四川","provinceServlet?province=云南","provinceServlet?province=陕西","provinceServlet?province=重庆","provinceServlet?province=贵州",
+					"provinceServlet?province=山西","provinceServlet?province=河南","provinceServlet?province=湖北","provinceServlet?province=湖南","provinceServlet?province=广西",
+					"provinceServlet?province=北京","provinceServlet?province=河北","provinceServlet?province=天津","provinceServlet?province=山东","provinceServlet?province=江苏",
+					"provinceServlet?province=安徽","provinceServlet?province=江西","provinceServlet?province=广东","provinceServlet?province=澳门","provinceServlet?province=海南",
+					"provinceServlet?province=上海","provinceServlet?province=浙江","provinceServlet?province=福建","provinceServlet?province=黑龙江","provinceServlet?province=吉林",
+					"provinceServlet?province=辽宁","provinceServlet?province=香港","provinceServlet?province=宁夏","provinceServlet?province=台湾"]
 			switch(param.name){
 				case '新疆':
 					location.href = urlArr[0];
