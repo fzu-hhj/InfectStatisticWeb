@@ -7,9 +7,6 @@
 </head>
 <body>
 <%
-	out.print("index");
-	String flag = "iniTime";
-	request.setAttribute("flag", flag);
 	request.getRequestDispatcher("mapServlet").forward(request, response);
 %>
 	

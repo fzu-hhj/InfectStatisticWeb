@@ -1,6 +1,6 @@
 package edu.fzu.infectStatisticWeb.pojo;
 
-import com.sun.xml.internal.bind.v2.runtime.Name;
+
 
 public class PersonStatus {
 	public static String[] PROVINCE = {

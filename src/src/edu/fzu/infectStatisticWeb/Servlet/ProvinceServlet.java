@@ -47,6 +47,7 @@ public class ProvinceServlet extends BaseServlet {
 		request.setAttribute("sp", sp);
 		request.setAttribute("cure", cure);
 		request.setAttribute("dead", dead);
+		System.out.println(getProvince());
 		request.setAttribute("province", getProvince());
 		request.getRequestDispatcher("ProvinceNum.jsp").forward(request, response);
 	}
