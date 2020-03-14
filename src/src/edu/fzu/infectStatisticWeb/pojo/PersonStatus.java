@@ -30,7 +30,7 @@ public class PersonStatus {
 	}
 	
 	public int getNum(int i) {
-		return Num[i];
+		return num[i];
 	}
 	
 	public int getProNum(String name) {

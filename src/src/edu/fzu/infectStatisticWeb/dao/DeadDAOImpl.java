@@ -1,6 +1,7 @@
 package edu.fzu.infectStatisticWeb.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -32,6 +33,33 @@ public class DeadDAOImpl implements DeadDAO {
 			e.printStackTrace();
  		}
 		return deads;
+	}
+	
+	@Override
+	public Dead lists(String date){
+		DBUtil dbUtil = new DBUtil();
+		try {
+			String sql = "select * from dead where 时间=?";
+			Connection conn = dbUtil.getConnection();
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1,date);
+			System.out.println("date:"+date);
+			System.out.println(sql);
+			ResultSet rs = stmt.executeQuery();
+			while(rs.next()) {
+				if(rs.getString("时间").equals(date)) {
+					int[] a = new int[35];
+					for(int i = 0;i < 35 ; i++) {
+						a[i] = rs.getInt(i+2);
+					}
+					Dead dead = new Dead(rs.getString("时间") , a);
+					return dead;
+				}
+			}
+ 		}catch (Exception e) {
+			e.printStackTrace();
+ 		}
+		return null;
 	}
 	
 	

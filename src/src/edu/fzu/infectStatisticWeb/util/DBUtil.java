@@ -13,7 +13,7 @@ public class DBUtil {
 	static String database = "infectstatistic";
 	static String encoding = "UTF-8";
 	static String loginName = "root";
-	static String password = "";
+	static String password = "hhj500235";
 
 	static {
 		try {

@@ -242,13 +242,13 @@
         
 		myChart.on('click',function(param){
 			console.log(param.name)
-			var urlArr=["LineServlet?province=新疆","LineServlet?province=西藏","LineServlet?province=青海","LineServlet?province=甘肃","LineServlet?province=内蒙古",
-					"LineServlet?province=四川","LineServlet?province=云南","LineServlet?province=陕西","LineServlet?province=重庆","LineServlet?province=贵州",
-					"LineServlet?province=山西","LineServlet?province=河南","LineServlet?province=湖北","LineServlet?province=湖南","LineServlet?province=广西",
-					"LineServlet?province=北京","LineServlet?province=河北","LineServlet?province=天津","LineServlet?province=山东","LineServlet?province=江苏",
-					"LineServlet?province=安徽","LineServlet?province=江西","LineServlet?province=广东","LineServlet?province=澳门","LineServlet?province=海南",
-					"LineServlet?province=上海","LineServlet?province=浙江","LineServlet?province=福建","LineServlet?province=黑龙江","LineServlet?province=吉林",
-					"LineServlet?province=辽宁","LineServlet?province=香港","LineServlet?province=宁夏","LineServlet?province=台湾"]
+			var urlArr=["ProvinceServlet?province=新疆","ProvinceServlet?province=西藏","ProvinceServlet?province=青海","ProvinceServlet?province=甘肃","ProvinceServlet?province=内蒙古",
+					"ProvinceServlet?province=四川","ProvinceServlet?province=云南","ProvinceServlet?province=陕西","ProvinceServlet?province=重庆","ProvinceServlet?province=贵州",
+					"ProvinceServlet?province=山西","ProvinceServlet?province=河南","ProvinceServlet?province=湖北","ProvinceServlet?province=湖南","ProvinceServlet?province=广西",
+					"ProvinceServlet?province=北京","ProvinceServlet?province=河北","ProvinceServlet?province=天津","ProvinceServlet?province=山东","ProvinceServlet?province=江苏",
+					"ProvinceServlet?province=安徽","ProvinceServlet?province=江西","ProvinceServlet?province=广东","ProvinceServlet?province=澳门","ProvinceServlet?province=海南",
+					"ProvinceServlet?province=上海","ProvinceServlet?province=浙江","ProvinceServlet?province=福建","ProvinceServlet?province=黑龙江","ProvinceServlet?province=吉林",
+					"ProvinceServlet?province=辽宁","ProvinceServlet?province=香港","ProvinceServlet?province=宁夏","ProvinceServlet?province=台湾"]
 			switch(param.name){
 				case '新疆':
 					location.href = urlArr[0];
