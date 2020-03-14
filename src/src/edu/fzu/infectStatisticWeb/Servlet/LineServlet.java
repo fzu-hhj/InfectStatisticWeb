@@ -21,12 +21,6 @@ import edu.fzu.infectStatisticWeb.Servlet.BaseServlet;
 @WebServlet("/LineServlet")
 public class LineServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
-	public static String[] PROVINCE = {
-			"全国","安徽","澳门","北京","重庆","福建",
-			"甘肃","广东","广西","贵州","海南","河北","河南","黑龙江",
-			"湖北","湖南","江西","吉林","江苏","辽宁","内蒙古","宁夏",
-			"青海","山西","山东","陕西","上海","四川","天津","台湾",
-			"西藏","新疆","香港","云南","浙江"};
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -54,14 +48,7 @@ public class LineServlet extends BaseServlet {
 		request.setAttribute("sps", sps);
 		request.setAttribute("cures", cures);
 		request.setAttribute("deads", deads);
-		String flag = request.getParameter("flag");
-		//判断传入的省名是省的编号还是直接省名
-		if(flag != null && flag.equals("p")) {
-			request.setAttribute("proNum", Integer.parseInt(request.getParameter("proNum")));
-		}
-		else {
-			request.setAttribute("proNum", getProNum());
-		}
+		request.setAttribute("province", getProvince());
 		request.getRequestDispatcher("LineChart.jsp").forward(request, response);
 	}
 
@@ -73,16 +60,11 @@ public class LineServlet extends BaseServlet {
 		doGet(request, response);
 	}
 	//省名转化为省的编号
-	private int getProNum() {
+	private String getProvince() {
 		String province = request.getParameter("province");
 		if(province == null) {
 			province = "全国";
 		}
-		for(int i = 0;i < PROVINCE.length;i++) {
-			if(province.equals(PROVINCE[i])) {
-				return i;
-			}
-		}
-		return 0;
+		return province;
 	}
 }

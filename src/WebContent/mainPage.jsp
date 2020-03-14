@@ -14,8 +14,10 @@
 </head>
 <body>
 	<%
-		
-    	Ip ip = (Ip)request.getAttribute("ip");
+		Ip ip = (Ip)request.getAttribute("ip");
+		Sp sp = (Sp)request.getAttribute("sp");
+		Cure cure = (Cure)request.getAttribute("cure");
+		Dead dead = (Dead)request.getAttribute("dead");
 			
 	
     %>
@@ -34,35 +36,35 @@
 		<!--现有疑似数据-->
 		<div class="rectangle" id="rt2"> 
 			<p class="dataText1" id="dt5">现有疑似</p>
-			<p class="dataText2" id="dt6">1人</p>
+			<p class="dataText2" id="dt6"><%=sp.getNum(0) %>人</p>
 			<p class="dataText3" id="dt7">昨日</p>
 			<p class="dataText4" id="dt8">+</p>
 		</div>
 		<!--现有重症数据-->
 		<div class="rectangle" id="rt3">
 			<p class="dataText1" id="dt9">现有重症</p>
-			<p class="dataText2" id="dt10">1人</p>
+			<p class="dataText2" id="dt10"><%=(ip.getNum(0)/3) %>人</p>
 			<p class="dataText3" id="dt11">昨日</p>
 			<p class="dataText4" id="dt12">+</p>
 		</div>
 		<!--累计确诊数据-->
 		<div class="rectangle" id="rt4">
 			<p class="dataText1" id="dt13">累计确诊</p>
-			<p class="dataText2" id="dt14">1人</p>
+			<p class="dataText2" id="dt14"><%=(ip.getNum(0)+dead.getNum(0)+cure.getNum(0)) %>人</p>
 			<p class="dataText3" id="dt15">昨日</p>
 			<p class="dataText4" id="dt16">+</p>
 		</div>
 		<!--累计治愈数据-->
 		<div class="rectangle" id="rt5">
 			<p class="dataText1" id="dt17">累计治愈</p>
-			<p class="dataText2" id="dt18">1人</p>
+			<p class="dataText2" id="dt18"><%=cure.getNum(0) %>人</p>
 			<p class="dataText3" id="dt19">昨日</p>
 			<p class="dataText4" id="dt20">+</p>
 		</div>
 		<!--累计死亡数据-->
 		<div class="rectangle" id="rt6">
 			<p class="dataText1" id="dt21">累计死亡</p>
-			<p class="dataText2" id="dt22">1人</p>
+			<p class="dataText2" id="dt22"><%=dead.getNum(0)%>人</p>
 			<p class="dataText3" id="dt23">昨日</p>
 			<p class="dataText4" id="dt24">+1</p>
 		</div>

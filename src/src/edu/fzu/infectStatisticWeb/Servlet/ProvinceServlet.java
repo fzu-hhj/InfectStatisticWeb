@@ -18,13 +18,7 @@ import edu.fzu.infectStatisticWeb.pojo.*;
  */
 @WebServlet("/provinceServlet")
 public class ProvinceServlet extends BaseServlet {
-	private static final long serialVersionUID = 1L;
-	public static String[] PROVINCE = {
-			"全国","安徽","澳门","北京","重庆","福建",
-			"甘肃","广东","广西","贵州","海南","河北","河南","黑龙江",
-			"湖北","湖南","江西","吉林","江苏","辽宁","内蒙古","宁夏",
-			"青海","山西","山东","陕西","上海","四川","天津","台湾",
-			"西藏","新疆","香港","云南","浙江"};   
+	private static final long serialVersionUID = 1L;  
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -52,13 +46,7 @@ public class ProvinceServlet extends BaseServlet {
 		request.setAttribute("sp", sp);
 		request.setAttribute("cure", cure);
 		request.setAttribute("dead", dead);
-		String flag = request.getParameter("flag"); 
-		if(flag != null && flag.equals("refresh")) {
-			request.setAttribute("proNum",Integer.parseInt(request.getParameter("proNum")));
-		}
-		else {
-			request.setAttribute("proNum", getProNum());
-		}
+		request.setAttribute("province", request.getAttribute("province"));
 		request.getRequestDispatcher("ProvinceNum.jsp").forward(request, response);
 	}
 
@@ -68,17 +56,6 @@ public class ProvinceServlet extends BaseServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
-	private int getProNum() {
-		String province = request.getParameter("province");
-		if(province != null) {
-			for(int i = 0;i < PROVINCE.length;i++) {
-				if(province.equals(PROVINCE[i])) {
-					return i;
-				}
-			}
-		}
-		return 0;
 	}
 	
 	private String getDateTime() {
